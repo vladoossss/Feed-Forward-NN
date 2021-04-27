@@ -36,6 +36,7 @@ class Trainer():
 
         optimizers = [Adam(self.model.parameters(), lr=lr),
                       SGD(self.model.parameters(), lr=lr)]
+
         self.optimizer = optimizers[optimizer_num]
 
         cuda = torch.cuda.is_available()
@@ -109,7 +110,7 @@ class Trainer():
                 plt.clf()
 
                 # для каждого батча тестовых данных визуализируем результаты бинарной классификации
-                # при удачно классификации один класс будет окрашен в бледно синий цвет(желтый+синий), а второй
+                # при удачной классификации один класс будет окрашен в бледно синий цвет(желтый+синий), а второй
                 # в оранжевый(красный+желтый)
                 plt.scatter(x_batch[:, 0], x_batch[:, 1], c=y_batch,
                             cmap=ListedColormap(['#FFFF00', '#FF0000']), marker='*')
@@ -154,7 +155,7 @@ if __name__ == "__main__":
     test_dataloader = DataLoader(test_dataset, batch_size=100, shuffle=False)
 
     # инициализируем нейросеть
-    layers_list_example = [(2, 3), (3, 2)]
+    layers_list_example = [(2, 7), (7, 2)]
     model = SimpleMLP(layers_list_example)
 
     # обучаем модель

@@ -41,5 +41,5 @@ conda create --name <env_name> --file requirements.txt
     
 # Starting the network
 Чтобы воспроизвести основные результаты работы нейронной сети необходимо
-создать 3 папки в главной директории проекта: class_img, cm_img, и loss_img, 
+создать 3 папки в главной директории проекта: __class_img, cm_img, loss_img__, 
 а также запустить файл __trainer.py__

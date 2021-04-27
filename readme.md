@@ -1,5 +1,12 @@
+#Installing dependencies
+### using pip
+pip install -r requirements.txt
+
+### using Conda
+conda create --name <env_name> --file requirements.txt
 
 
+# Job description
 1) data
     * data generator
     * preprocessing
@@ -32,3 +39,6 @@
   
 В каждой из 3 папок также присутствует итоговое изображение в формате .gif
     
+# Starting the network
+Чтобы воспроизвести основные результаты работы нейронной сети достаточно 
+запустить файл __trainer.py__

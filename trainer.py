@@ -14,6 +14,12 @@ from nn import SimpleMLP
 import os
 import imageio
 
+from pathlib import Path
+
+Path("class_img").mkdir(parents=True, exist_ok=True)
+Path("loss_img").mkdir(parents=True, exist_ok=True)
+Path("cm_img").mkdir(parents=True, exist_ok=True)
+
 plt.style.use('dark_background')
 
 
